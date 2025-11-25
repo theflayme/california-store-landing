@@ -3,15 +3,18 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  margin-bottom: 30px;
 }
 
 nav {
   ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
     margin: 0;
     padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 30px;
 
     li {
       a {
@@ -31,4 +34,12 @@ nav {
       }
     }
   }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
 }

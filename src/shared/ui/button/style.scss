@@ -1,67 +1,18 @@
-button {
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+.btn-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 200px;
+  height: 50px;
+  border: 1px solid #000000;
+  padding: 15px 60px;
+
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #45a049;
-  }
-
-  &.ghost {
-    background-color: transparent;
-    color: #4caf50;
-    border: 2px solid #4caf50;
-
-    &:hover {
-      background-color: #4caf50;
-      color: white;
-    }
-  }
-
-  &.danger {
-    background-color: #f44336;
-    border: none;
-    color: white;
-
-    &:hover {
-      background-color: #d32f2f;
-    }
-  }
-
-  &.link {
-    background-color: transparent;
-    color: #2196f3;
-    border: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &.success {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-
-    &:hover {
-      background-color: #388e3c;
-    }
-  }
-
-  &.warning {
-    background-color: #ff9800;
-    border: none;
-    color: white;
-
-    &:hover {
-      background-color: #f57c00;
-    }
-  }
+  line-height: 21.6px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
 }

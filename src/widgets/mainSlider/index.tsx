@@ -4,46 +4,16 @@ import "./style.scss";
 import sliderMobile from "@shared/assets/images/png/sliderMobile.png";
 import sliderDesktop from "@shared/assets/images/png/Laptop.png";
 
+import ArrowLeft from "@shared/assets/images/icons/ArrowLeft.svg?react";
+import ArrowRight from "@shared/assets/images/icons/VectorRight.svg?react";
+import Button from "@shared/ui/button";
+
 interface Slide {
   title: string;
   description: string;
   buttonLabel: string;
   src: string;
 }
-
-const ArrowLeft = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="#000"
-    strokeWidth={1.5}
-    className="arrow-icon"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M15.75 19.5 8.25 12l7.5-7.5"
-    />
-  </svg>
-);
-
-const ArrowRight = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="currentColor"
-    className="size-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-    />
-  </svg>
-);
 
 const inMemorySlides: Slide[] = [
   {
@@ -97,7 +67,6 @@ const Slider = () => {
       </div>
 
       <div className="slider-container">
-        {/* ◀️ Левая кнопка */}
         <span className="slider-arrow left" onClick={prevSlide}>
           <ArrowLeft />
         </span>
@@ -108,12 +77,11 @@ const Slider = () => {
             <p>{current.description}</p>
           </div>
 
-          <button>{current.buttonLabel}</button>
+          <Button>{current.buttonLabel}</Button>
         </div>
 
         <img src={current.src} alt={`Slide ${activeIndex + 1}`} />
 
-        {/* ▶️ Правая кнопка */}
         <button className="slider-arrow right" onClick={nextSlide}>
           <ArrowRight />
         </button>

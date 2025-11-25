@@ -1,5 +1,6 @@
 import Shopper from "@entities/product/ui/shopper";
-import Logotype from "@shared/assets/images/png/Logotype.png";
+import Search from "@entities/product/ui/search";
+import Logotype from "@shared/assets/images/svg/Logotype.svg?react";
 
 import "./style.scss";
 import { Outlet } from "react-router";
@@ -8,7 +9,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <img src={Logotype} alt="" />
+        <Logotype />
         <nav>
           <ul>
             <li>
@@ -25,7 +26,10 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <Shopper />
+        <div className="actions">
+          <Search />
+          <Shopper />
+        </div>
       </header>
       <main>
         <Outlet />
