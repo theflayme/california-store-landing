@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import "./style.scss";
 
 import sliderMobile from "@shared/assets/images/png/sliderMobile.png";
-import sliderDesktop from "@shared/assets/images/png/Laptop.png";
+import sliderDesktop from "@shared/assets/images/png/selled/Laptop.png";
 
 import ArrowLeft from "@shared/assets/images/icons/ArrowLeft.svg?react";
 import ArrowRight from "@shared/assets/images/icons/VectorRight.svg?react";

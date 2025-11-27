@@ -8,13 +8,13 @@ header {
 
 nav {
   ul {
-    margin: 0;
-    padding: 0;
-
     display: flex;
     justify-content: space-between;
     list-style: none;
     gap: 30px;
+
+    margin: 0;
+    padding: 0;
 
     li {
       a {
