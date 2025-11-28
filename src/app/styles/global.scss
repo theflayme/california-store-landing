@@ -1,59 +1,35 @@
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: normal;
-  src: url("@shared/fonts/readex/ReadexPro-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 300;
-  src: url("@shared/fonts/readex/ReadexPro-ExtraLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 300;
-  src: url("@shared/fonts/readex/ReadexPro-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 500;
-  src: url("@shared/fonts/readex/ReadexPro-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 600;
-  src: url("@shared/fonts/readex/ReadexPro-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 700;
-  src: url("@shared/fonts/readex/ReadexPro-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Readex Pro";
-  font-weight: 100 900;
-  src: url("@shared/fonts/readex/ReadexPro-VariableFont_HEXPwght.ttf")
-    format("truetype");
-}
-
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  button {
+    outline: none;
+  }
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0 auto;
   background: #ffffff;
   padding: 0px 100px;
   max-width: 1800px;
-
-  font: {
-    family: "Readex Pro", sans-serif;
-  }
 }

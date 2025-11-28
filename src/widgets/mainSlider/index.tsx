@@ -56,33 +56,42 @@ const Slider = () => {
 
   return (
     <section className="slider">
-      <div className="slider-dots">
+      <div className="slider__dots">
         {inMemorySlides.map((_, idx) => (
           <span
             key={idx}
-            className={activeIndex === idx ? "dot active" : "dot"}
+            className={`slider__dot ${
+              activeIndex === idx ? "slider__dot--active" : ""
+            }`}
             onClick={() => setActiveIndex(idx)}
           />
         ))}
       </div>
 
-      <div className="slider-container">
-        <span className="slider-arrow left" onClick={prevSlide}>
+      <div className="slider__container">
+        <button
+          className="slider__arrow slider__arrow--left"
+          onClick={prevSlide}
+        >
           <ArrowLeft />
-        </span>
+        </button>
 
-        <div className="slider-content">
+        <div className="slider__content">
           <div className="content-info">
             <h2>{current.title}</h2>
             <p>{current.description}</p>
           </div>
-
           <Button>{current.buttonLabel}</Button>
         </div>
 
-        <img src={current.src} alt={`Slide ${activeIndex + 1}`} />
+        <div className="slider__image-wrapper">
+          <img src={current.src} alt={`Slide ${activeIndex + 1}`} />
+        </div>
 
-        <button className="slider-arrow right" onClick={nextSlide}>
+        <button
+          className="slider__arrow slider__arrow--right"
+          onClick={nextSlide}
+        >
           <ArrowRight />
         </button>
       </div>
